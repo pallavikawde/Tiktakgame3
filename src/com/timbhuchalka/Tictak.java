@@ -24,6 +24,20 @@ public class Tictak {
         System.out.println("your choice - " +shiftchoice);
         return shiftchoice;
     }
+    public static void showboard(char[] boardtoshow) {
+
+
+    int count=0;
+        for(int i=0;i<boardtoshow.length;i++) {
+            count ++;
+            System.out.print("["+boardtoshow[i] + "] ");
+            if (count == 3) {
+
+                count=0;
+                System.out.println("\n");
+            }
+        }
+    }
             //main methode
         public static void main(String[] args) {
         //calling methode
@@ -33,6 +47,7 @@ public class Tictak {
             char shiftchoice=playeroption();
             System.out.println("enter option");
             char computerchice=playeroption();
+            showboard(board);
         }
     }
 
