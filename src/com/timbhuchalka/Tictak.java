@@ -61,6 +61,24 @@ public class Tictak {
 
 
     }
+    // these methode is choosing player option
+    public static String playerchoice(){
+
+        String p;
+        System.out.println("enter your choice  as 1 head or as 0  tail to play");
+        Scanner sc=new Scanner(System.in);
+        int choice=sc.nextInt();
+        int i=(int)(Math.random()*10)/2;
+        if (1 == choice) {
+            System.out.println("you won the toss user wil play the game");
+            p="computer";
+        }else{
+            System.out.println("you loss the toss computer will play the game");
+            p="user";
+        }
+        System.out.println(" choce of playing player is" +p);
+        return p;
+    }
             //main methode
         public static void main(String[] args) {
         //calling methode
@@ -73,6 +91,8 @@ public class Tictak {
             showboard(board);
             dlocation(board);
             showboard(board);
+            String player=playerchoice();
+            
         }
     }
 
