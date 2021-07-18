@@ -10,7 +10,7 @@ public class Tictak {
     public static char[] createboard(){
 //creatin array with size 10
 
-        for(int i=0;i<board.length;i++) {
+        for(int i=1;i<board.length;i++) {
             board[i]=' ';
         }
             return board;
@@ -33,7 +33,7 @@ public class Tictak {
 
 
         int count = 0;
-        for (int i = 0; i < boardtoshow.length; i++) {
+        for (int i = 1; i < boardtoshow.length; i++) {
             count++;
             System.out.print(i+"[" + boardtoshow[i] + "] ");
             if (count == 3) {
@@ -45,7 +45,9 @@ public class Tictak {
     }
     public static char[] dlocation(char[]oldBoard){
         Scanner dlo = new Scanner(System.in);
-        System.out.println("enter a location where you want to add input");
+        System.out.println("this is the board");
+        showboard(oldBoard);
+        System.out.println("check empty spaces & enter a location where you want to add input");
         int location = dlo.nextInt();
         if(oldBoard[location] == ' ')
         {
